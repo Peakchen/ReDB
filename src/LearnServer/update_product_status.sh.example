@@ -1,0 +1,26 @@
+# 设置staffID与密码
+staffID=
+password=
+
+# 后台的地址与端口
+host=
+port=
+# 协议，http https
+protocol="http"
+
+if [ $2 = "on" ]
+then
+    status="true"
+elif [ $2 = "off" ]
+then
+    status="false"
+else
+    exit
+fi
+
+loginURL=${protocol}://${host}:${port}/api/v3/staffs/login/
+statusURL=${protocol}://${host}:${port}/api/v3/staffs/products/${1}/status/
+
+curl -H "Content-Type:application/json" --data "{\"staffID\":${staffID},\"password\":\"${password}\",\"remember\":false}" --cookie-jar staffCookie --silent ${loginURL} &&
+curl -H "Content-Type:application/json" -X PUT --data "{\"status\":${status}}" --cookie staffCookie --silent ${statusURL} &&
+rm -f staffCookie

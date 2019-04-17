@@ -1,0 +1,35 @@
+host: 127.0.0.1
+port: 8080
+secret: somethingSecret
+debug: true
+
+contentserver: http://127.0.0.1:4000/api/contactWithUserServer-v1
+bookimagesurl: http://127.0.0.1:8181/images/books/
+paperimagesurl: http://127.0.0.1:8181/images/papers/
+filesserver: http://127.0.0.1:8181
+
+htmlurl: http://files.learningx.cn/html/
+problemdocurl: http://files.learningx.cn/doc/problem/
+
+studentfilesdir: /mnt/data/xlsx/
+studentfilesurl: http://127.0.0.1:9090/xlsx/
+
+contentdb:
+  # Local Unix Socket
+  # protocol: unix
+  # addr: /run/mysqld/mysqld.sock
+
+  # Network
+  protocol: tcp
+  addr: 127.0.0.1:3306
+
+  # Database name
+  name: 
+  user: 
+  password: 
+
+userdb:
+  hostandport: 
+  name       : 
+  user       : 
+  passwd     : 
