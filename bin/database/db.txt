@@ -14,5 +14,6 @@ contentdb:
 
   userdb:
   hostandport: dds-bp1b62ac14798a241740-pub.mongodb.rds.aliyuncs.com:3717,dds-bp1b62ac14798a242120-pub.mongodb.rds.aliyuncs.com:3717
+  name       : learningx_test
   user       : learningx_test
   passwd     : CUH4YfV7Huphmtxocsat
