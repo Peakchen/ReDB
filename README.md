@@ -33,3 +33,6 @@ Software architecture description
 4. The most valuable open source project
 5. The manual of Git
 6. The most popular members 
+
+#### License 
+Apache License 2.0.
